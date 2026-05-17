@@ -78,9 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "A sixth-generation family farm on the Saanich Peninsula. Seasonal produce, pasture-raised beef, berries, hay, and our beloved U-Pick pumpkin patch." },
       { name: "author", content: "Michell's Farm" },
       { property: "og:title", content: "Michell's Farm — Saanich Peninsula, est. 1862" },
-      { property: "og:description", content: "Sixth-generation family farm growing 50+ fruits and vegetables on Vancouver Island." },
+      { property: "og:description", content: "A sixth-generation family farm on the Saanich Peninsula. Seasonal produce, pasture-raised beef, berries, hay, and our beloved U-Pick pumpkin patch." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Michell's Farm — Saanich Peninsula, est. 1862" },
+      { name: "twitter:description", content: "A sixth-generation family farm on the Saanich Peninsula. Seasonal produce, pasture-raised beef, berries, hay, and our beloved U-Pick pumpkin patch." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8a11ebfe-f61c-42b2-8fc5-11a0dc027d57" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8a11ebfe-f61c-42b2-8fc5-11a0dc027d57" },
     ],
     links: [
       {
