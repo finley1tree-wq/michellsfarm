@@ -52,7 +52,7 @@ function VisitPage() {
             <div className="eyebrow text-cream/80">Every fall</div>
             <h3 className="mt-2 font-serif text-3xl">U-Pick Pumpkin Patch</h3>
             <p className="mt-2 max-w-sm text-cream/85">
-              Open every October. Wagon rides and a field full of pumpkins.
+              Open every fall. Wagon rides and a field full of pumpkins.
             </p>
           </div>
         </div>
