@@ -1,9 +1,46 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook } from "lucide-react";
+import { useState } from "react";
 
 export function Footer() {
+  const [email, setEmail] = useState("");
+  const [sent, setSent] = useState(false);
   return (
     <footer className="mt-32 border-t border-border bg-primary text-primary-foreground">
+      <div className="border-b border-primary-foreground/15">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+          <div className="max-w-md">
+            <div className="eyebrow text-primary-foreground/60">Stay in the loop</div>
+            <h3 className="mt-2 font-serif text-2xl">Know when the pumpkin patch opens</h3>
+            <p className="mt-2 text-sm text-primary-foreground/70">
+              A short note a few times a year — strawberries, corn, pumpkins. That's it.
+            </p>
+          </div>
+          {sent ? (
+            <p className="text-sm text-cream">Thanks — we'll be in touch.</p>
+          ) : (
+            <form
+              onSubmit={(e) => { e.preventDefault(); if (email) setSent(true); }}
+              className="flex w-full max-w-md gap-2"
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+                className="flex-1 rounded-full border border-primary-foreground/30 bg-transparent px-4 py-2.5 text-sm text-cream placeholder:text-primary-foreground/50 focus:border-cream focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="rounded-full bg-cream px-5 py-2.5 text-sm font-medium text-primary hover:bg-accent hover:text-accent-foreground"
+              >
+                Sign up
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-4 lg:px-10">
         <div className="lg:col-span-2">
           <div className="font-display text-4xl tracking-tight">Michell's Farm</div>
