@@ -127,7 +127,7 @@ function ProductsPage() {
             <h3 className="mt-2 font-serif text-3xl">Agricultural supplies, grown & sourced locally</h3>
             <p className="mt-3 text-foreground/75">
               1st & 2nd cut Michell-grown hay, local barley straw, bagged compost
-              and aged manure.
+              and aged manure, plus bagged bark mulch.
             </p>
             <p className="mt-4 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
               Pick up in store only · 2nd cut hay sold out
