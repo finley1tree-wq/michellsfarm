@@ -81,28 +81,20 @@ function Home() {
         </Link>
       </section>
 
-      {/* THREE BUSINESSES */}
+      {/* SISTER BUSINESSES */}
       <section className="border-y border-border bg-background py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="max-w-2xl">
-            <div className="eyebrow text-moss">Three businesses, one family</div>
-            <h2 className="mt-3 text-4xl sm:text-5xl">All on the same property</h2>
+            <div className="eyebrow text-moss">Also on the property</div>
+            <h2 className="mt-3 text-4xl sm:text-5xl">More to explore next door</h2>
             <p className="mt-5 text-lg text-foreground/75">
-              The Michell family runs three businesses side by side on Island View Rd —
-              the farm market, a farm-to-table grill, and a working plant nursery.
-              Visit one, stay for all three.
+              Right beside the farm market you'll find Harvest Rd — our farm-to-table
+              grill — and Michell Valley Plants, our working nursery. All part of the
+              family, all on Island View Rd.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <BizCard
-              image={produce}
-              eyebrow="The Farm Market"
-              title="Michell's Farm Market"
-              body="Produce, berries, beef, eggs, baked goods & honey. Open daily 9–5."
-              to="/products"
-              cta="What's in season"
-            />
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
             <BizCard
               image={restaurant}
               eyebrow="The Restaurant"
