@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import produce from "@/assets/produce.jpg";
 import berries from "@/assets/berries.jpg";
 import cattle from "@/assets/cattle.jpg";
@@ -182,6 +183,26 @@ function ProductsPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Recipes nudge */}
+      <section className="border-t border-border bg-background py-20">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-6 px-6 lg:px-10">
+          <div className="max-w-2xl">
+            <div className="eyebrow text-moss">From the farm kitchen</div>
+            <h2 className="mt-3 text-3xl sm:text-4xl">What to make with it all</h2>
+            <p className="mt-4 text-foreground/75">
+              Seasonal recipes built around whatever's in the field this week.
+            </p>
+          </div>
+          <Link
+            to="/recipes"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-cream hover:opacity-90"
+          >
+            Browse recipes
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
     </>
