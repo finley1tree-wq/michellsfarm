@@ -56,10 +56,6 @@ function ProductsPage() {
           Fifty-something varieties,<br />
           <span className="font-display">all grown right here.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-foreground/75">
-          From asparagus in spring to U-pick pumpkins in fall — here's what comes out of
-          the ground at Michell's across the year.
-        </p>
       </section>
 
       {/* Vegetables */}
@@ -72,16 +68,22 @@ function ProductsPage() {
           <div className="eyebrow text-clay">Field-grown</div>
           <h2 className="mt-3 text-4xl sm:text-5xl">Fruits & Vegetables</h2>
           <p className="mt-4 text-foreground/75">
-            We grow high-quality, safe, nutritious food that our family is proud to put
-            on the community's dinner tables — including our own.
+            Apples, beans, beets, broccoli, brussels sprouts, cabbage, carrots,
+            cauliflower, corn, kale, lettuce, onions, pumpkins, squash, zucchini — and
+            another 30+ varieties through the season.
           </p>
-          <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-            {vegetables.map((v) => (
-              <li key={v} className="flex gap-3 border-b border-border/50 pb-3 text-sm text-foreground/85">
-                <span className="font-display text-accent">·</span>{v}
-              </li>
-            ))}
-          </ul>
+          <details className="mt-6 group">
+            <summary className="cursor-pointer text-sm font-medium text-primary underline-offset-4 hover:underline">
+              See the full list →
+            </summary>
+            <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+              {vegetables.map((v) => (
+                <li key={v} className="flex gap-3 border-b border-border/50 pb-3 text-sm text-foreground/85">
+                  <span className="font-display text-accent">·</span>{v}
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
       </section>
 
@@ -92,8 +94,7 @@ function ProductsPage() {
             <div className="eyebrow text-clay">In season</div>
             <h2 className="mt-3 text-4xl sm:text-5xl">Seasonal Fresh Berries</h2>
             <p className="mt-4 max-w-xl text-foreground/75">
-              Sweet, picked at peak ripeness, and on our shelves the same day. We freeze
-              what we can so you can keep eating them straight through winter.
+              Picked at peak. Fresh in season, frozen all winter.
             </p>
             <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {berriesList.map((b) => (
@@ -117,9 +118,7 @@ function ProductsPage() {
             <div className="eyebrow text-clay">Michell beef</div>
             <h3 className="mt-2 font-serif text-3xl">Pasture-raised, hormone & antibiotic free</h3>
             <p className="mt-3 text-foreground/75">
-              Our cattle graze the fields you can see from Island View Rd. We grow our
-              own grass and grain to feed the herd — 100% locally raised, sold fresh and
-              frozen at the market year-round.
+              Grazed on the fields off Island View Rd. Sold fresh and frozen, year-round.
             </p>
           </div>
         </article>
@@ -128,12 +127,11 @@ function ProductsPage() {
             <div className="eyebrow text-clay">Hay, straw & compost</div>
             <h3 className="mt-2 font-serif text-3xl">Agricultural supplies, grown & sourced locally</h3>
             <p className="mt-3 text-foreground/75">
-              Excellent quality 1st and 2nd cut Michell-grown hay for horses, sheep or
-              any livestock. Local barley straw for garden mulch, bedding or fall
-              displays. Bagged compost and aged manure for your spring beds.
+              1st & 2nd cut Michell-grown hay, local barley straw, bagged compost
+              and aged manure.
             </p>
             <p className="mt-4 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
-              Pick up in store only — currently sold out of 2nd cut hay.
+              Pick up in store only · 2nd cut hay sold out
             </p>
           </div>
         </article>
@@ -148,11 +146,7 @@ function ProductsPage() {
         <div className="lg:col-span-7">
           <div className="eyebrow text-clay">Daily in the market</div>
           <h2 className="mt-3 text-4xl sm:text-5xl">Eggs, baked goods & honey</h2>
-          <p className="mt-4 text-foreground/75">
-            The everyday staples — sourced from people we know, baked fresh, and
-            delivered to our shelves while they're still warm.
-          </p>
-          <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+          <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {[
               "Fresh local farm eggs — brown, large",
               "Free-run & organic eggs",
@@ -183,12 +177,10 @@ function ProductsPage() {
               Christmas trees<br /><span className="font-display">& fresh holly.</span>
             </h2>
             <p className="mt-6 text-lg text-cream/85">
-              Locally grown Douglas fir, grand fir and noble fir — cut fresh and stacked
-              by the market every December. Plus bundles of variegated and English holly
-              cut from our own hedges for wreaths and table settings.
+              Fresh-cut Douglas, grand & noble fir, plus bundles of holly from our hedges.
             </p>
-            <p className="mt-4 text-sm text-cream/70">
-              Available early December through Christmas Eve, while supplies last.
+            <p className="mt-3 text-sm text-cream/70">
+              Early December through Christmas Eve, while supplies last.
             </p>
           </div>
         </div>
@@ -201,10 +193,6 @@ function ProductsPage() {
           <h2 className="mt-3 max-w-3xl text-4xl sm:text-5xl">
             And a market full of the best <span className="font-display">local goods</span>.
           </h2>
-          <p className="mt-4 max-w-2xl text-foreground/75">
-            Bread, soups, vinegars, cheeses, eggs, honey, jams, dairy and more — sourced
-            from people we know on Vancouver Island.
-          </p>
           <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {partners.map(([name, url]) => (
               <li key={name}>
