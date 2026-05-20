@@ -37,8 +37,7 @@ function Home() {
               <span className="font-display">one piece of earth.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg text-cream/85">
-              We've been farming the same land outside Saanichton for over 160 years —
-              growing real food for the people who live here.
+              Farming the same land outside Saanichton since 1862.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -69,34 +68,15 @@ function Home() {
       </section>
 
       {/* STORY STRIP */}
-      <section className="mx-auto max-w-7xl px-6 py-32 lg:px-10">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
-          <div className="lg:col-span-5">
-            <div className="eyebrow text-moss">A family farm</div>
-            <h2 className="mt-4 text-4xl sm:text-5xl">
-              Farming the Saanich Peninsula since <span className="font-display">1862</span>.
-            </h2>
-          </div>
-          <div className="space-y-6 text-lg leading-relaxed text-foreground/80 lg:col-span-7">
-            <p>
-              William Michell bought a 100-acre parcel here in the 1860s with the gold
-              he'd dug out of the Cariboo. Six generations later, his great-great-great
-              grandchildren are still on that same ground.
-            </p>
-            <p>
-              Today the farm spans 400+ acres of vegetables, berries, hay and
-              pasture-raised cattle — four thousand tonnes of produce a year, all of it
-              destined for tables somewhere close to home.
-            </p>
-            <Link
-              to="/about"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-primary"
-            >
-              Read our full story
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
-          </div>
-        </div>
+      <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10">
+        <div className="eyebrow text-moss">A family farm</div>
+        <h2 className="mt-4 text-3xl sm:text-4xl">
+          Six generations on the same Saanich soil — 400+ acres, 50+ crops, all grown here.
+        </h2>
+        <Link to="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary">
+          Read our story
+          <ArrowUpRight className="h-4 w-4" />
+        </Link>
       </section>
 
       {/* WHAT WE GROW — editorial grid */}
@@ -156,8 +136,7 @@ function Home() {
               The <span className="font-display">U-Pick</span><br />Pumpkin Patch
             </h2>
             <p className="mt-6 text-lg text-cream/85">
-              A Saanich tradition. Wagon rides, sugar pumpkins, sticky cider hands, and
-              a field that goes on as far as a kid can run.
+              Wagon rides, sugar pumpkins, and a field that goes on as far as a kid can run.
             </p>
             <Link
               to="/visit"
@@ -168,16 +147,6 @@ function Home() {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* QUOTE */}
-      <section className="mx-auto max-w-5xl px-6 py-32 text-center lg:px-10">
-        <p className="font-serif text-3xl leading-tight text-foreground sm:text-5xl">
-          <span className="font-display text-accent">"</span>You are what you eat.<span className="font-display text-accent">"</span>
-        </p>
-        <p className="mt-6 text-sm uppercase tracking-[0.25em] text-muted-foreground">
-          The Michell family — six generations on
-        </p>
       </section>
     </>
   );
