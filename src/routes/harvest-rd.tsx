@@ -37,25 +37,23 @@ function HarvestRdPage() {
         <div className="space-y-8 lg:col-span-7">
           <div>
             <div className="eyebrow text-clay">The menu</div>
-            <h2 className="mt-2 font-serif text-4xl">Built from the field next door</h2>
+            <h2 className="mt-2 font-serif text-4xl">Seasonal menus, fresh local ingredients</h2>
             <p className="mt-4 text-foreground/75">
-              Menu changes with the season. A taste of what's on now:
+              The menu changes with what's coming out of the field next door.
+              Custom cold-press juicing too. Full menu and updates are posted
+              on Instagram and on the Harvest Rd website.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="https://www.harvestrd.com" target="_blank" rel="noreferrer"
+                className="rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground hover:opacity-90">
+                harvestrd.com →
+              </a>
+              <a href="https://instagram.com/harvest.rd" target="_blank" rel="noreferrer"
+                className="rounded-full border border-border px-5 py-2.5 text-sm hover:bg-secondary">
+                @harvest.rd
+              </a>
+            </div>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {[
-              "Michell beef burger on a Portofino bun",
-              "Heirloom tomato salad with Stillmeadow goat cheese",
-              "Roasted squash & sage soup",
-              "Harvest Rd grain bowl",
-              "Tayberry galette à la mode",
-              "Local craft beer & BC wine",
-            ].map((item) => (
-              <li key={item} className="flex gap-3 border-b border-border/50 pb-3 text-sm text-foreground/85">
-                <span className="font-display text-accent">·</span>{item}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <aside className="lg:col-span-5">
@@ -63,7 +61,7 @@ function HarvestRdPage() {
             <div>
               <div className="eyebrow text-clay">Hours</div>
               <p className="mt-2 text-foreground/85">10 am — 5 pm, every day</p>
-              <p className="mt-1 text-xs text-muted-foreground">Seasonal hours — call to confirm in winter</p>
+              <p className="mt-1 text-xs text-muted-foreground">Check Instagram for updates</p>
             </div>
             <div className="border-t border-border pt-6">
               <div className="eyebrow text-clay">Find us</div>
