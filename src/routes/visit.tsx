@@ -74,7 +74,7 @@ function VisitPage() {
       {/* Neighbours */}
       <section className="bg-secondary/60 py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:px-10">
-          <a href="https://instagram.com/harvest.rd" target="_blank" rel="noreferrer"
+          <a href="/harvest-rd"
             className="group rounded-2xl border border-border bg-card p-8 transition-colors hover:border-accent">
             <div className="eyebrow text-clay">Right next door</div>
             <h3 className="mt-2 font-serif text-3xl">Harvest Rd — Farm to Table Grill</h3>
@@ -82,9 +82,9 @@ function VisitPage() {
               Seasonal menus inspired by the freshest local ingredients, located on the
               Lochside Trail beside our market. Open every day 10—5.
             </p>
-            <span className="mt-4 inline-block text-sm text-accent">Follow on Instagram →</span>
+            <span className="mt-4 inline-block text-sm text-accent">See the menu →</span>
           </a>
-          <a href="https://instagram.com/michellvalleyplants" target="_blank" rel="noreferrer"
+          <a href="/nursery"
             className="group rounded-2xl border border-border bg-card p-8 transition-colors hover:border-accent">
             <div className="eyebrow text-clay">Behind the market</div>
             <h3 className="mt-2 font-serif text-3xl">Michell Valley Plants</h3>
@@ -92,7 +92,7 @@ function VisitPage() {
               Seeds, veggie starts, tomato plants, bedding plants, basket stuffers,
               herbs, roses and shrubs. Open every day 9:30—5. Call 250-886-0494.
             </p>
-            <span className="mt-4 inline-block text-sm text-accent">Follow on Instagram →</span>
+            <span className="mt-4 inline-block text-sm text-accent">Visit the nursery →</span>
           </a>
         </div>
       </section>
