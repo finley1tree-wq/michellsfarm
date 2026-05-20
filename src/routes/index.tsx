@@ -5,6 +5,8 @@ import produce from "@/assets/produce.jpg";
 import cattle from "@/assets/cattle.jpg";
 import pumpkins from "@/assets/pumpkins.jpg";
 import berries from "@/assets/berries.jpg";
+import restaurant from "@/assets/restaurant.jpg";
+import nursery from "@/assets/nursery.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -77,6 +79,48 @@ function Home() {
           Read our story
           <ArrowUpRight className="h-4 w-4" />
         </Link>
+      </section>
+
+      {/* THREE BUSINESSES */}
+      <section className="border-y border-border bg-background py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="max-w-2xl">
+            <div className="eyebrow text-moss">Three businesses, one family</div>
+            <h2 className="mt-3 text-4xl sm:text-5xl">All on the same property</h2>
+            <p className="mt-5 text-lg text-foreground/75">
+              The Michell family runs three businesses side by side on Island View Rd —
+              the farm market, a farm-to-table grill, and a working plant nursery.
+              Visit one, stay for all three.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            <BizCard
+              image={produce}
+              eyebrow="The Farm Market"
+              title="Michell's Farm Market"
+              body="Produce, berries, beef, eggs, baked goods & honey. Open daily 9–5."
+              to="/products"
+              cta="What's in season"
+            />
+            <BizCard
+              image={restaurant}
+              eyebrow="The Restaurant"
+              title="Harvest Rd"
+              body="Farm-to-table grill right next to the market. Seasonal hours."
+              to="/harvest-rd"
+              cta="See the menu"
+            />
+            <BizCard
+              image={nursery}
+              eyebrow="The Nursery"
+              title="Michell Valley Plants"
+              body="Veggie starts, bedding plants, herbs & perennials. Spring through fall."
+              to="/nursery"
+              cta="Visit the nursery"
+            />
+          </div>
+        </div>
       </section>
 
       {/* WHAT WE GROW — editorial grid */}
@@ -179,5 +223,34 @@ function Feature({
         <p className="mt-2 max-w-md text-sm text-cream/80">{body}</p>
       </div>
     </article>
+  );
+}
+
+function BizCard({
+  image, eyebrow, title, body, to, cta,
+}: { image: string; eyebrow: string; title: string; body: string; to: string; cta: string }) {
+  return (
+    <Link
+      to={to}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+    >
+      <div className="relative h-52 overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-6">
+        <div className="eyebrow text-moss">{eyebrow}</div>
+        <h3 className="mt-2 font-serif text-2xl">{title}</h3>
+        <p className="mt-3 flex-1 text-sm text-foreground/75">{body}</p>
+        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+          {cta}
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </span>
+      </div>
+    </Link>
   );
 }
