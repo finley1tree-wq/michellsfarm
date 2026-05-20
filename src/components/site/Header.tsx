@@ -15,10 +15,14 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const scrollHomeToTop = () => {
+    requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: "auto" }));
+  };
+
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link to="/" className="group flex items-baseline gap-2">
+        <Link to="/" resetScroll onClick={scrollHomeToTop} className="group flex items-baseline gap-2">
           <span className="font-display text-2xl tracking-tight text-primary">Michell's</span>
           <span className="eyebrow hidden text-muted-foreground sm:inline">Farm · est. 1862</span>
         </Link>
@@ -27,6 +31,8 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
+              resetScroll
+              onClick={n.to === "/" ? scrollHomeToTop : undefined}
               className="text-sm text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary font-medium" }}
               activeOptions={{ exact: n.to === "/" }}
@@ -58,7 +64,11 @@ export function Header() {
               <Link
                 key={n.to}
                 to={n.to}
-                onClick={() => setOpen(false)}
+                resetScroll
+                onClick={() => {
+                  setOpen(false);
+                  if (n.to === "/") scrollHomeToTop();
+                }}
                 className="rounded-md px-2 py-3 text-base hover:bg-secondary"
                 activeProps={{ className: "text-primary font-medium" }}
                 activeOptions={{ exact: n.to === "/" }}
