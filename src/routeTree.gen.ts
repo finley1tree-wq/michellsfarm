@@ -13,6 +13,7 @@ import { Route as VisitRouteImport } from './routes/visit'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RecipesRouteImport } from './routes/recipes'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as HarvestRdRouteImport } from './routes/harvest-rd'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -37,6 +38,11 @@ const ProductsRoute = ProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HarvestRdRoute = HarvestRdRouteImport.update({
+  id: '/harvest-rd',
+  path: '/harvest-rd',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/harvest-rd': typeof HarvestRdRoute
   '/products': typeof ProductsRoute
   '/recipes': typeof RecipesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/harvest-rd': typeof HarvestRdRoute
   '/products': typeof ProductsRoute
   '/recipes': typeof RecipesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/harvest-rd': typeof HarvestRdRoute
   '/products': typeof ProductsRoute
   '/recipes': typeof RecipesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/harvest-rd'
     | '/products'
     | '/recipes'
     | '/sitemap.xml'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/harvest-rd'
     | '/products'
     | '/recipes'
     | '/sitemap.xml'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/harvest-rd'
     | '/products'
     | '/recipes'
     | '/sitemap.xml'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  HarvestRdRoute: typeof HarvestRdRoute
   ProductsRoute: typeof ProductsRoute
   RecipesRoute: typeof RecipesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/harvest-rd': {
+      id: '/harvest-rd'
+      path: '/harvest-rd'
+      fullPath: '/harvest-rd'
+      preLoaderRoute: typeof HarvestRdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  HarvestRdRoute: HarvestRdRoute,
   ProductsRoute: ProductsRoute,
   RecipesRoute: RecipesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
