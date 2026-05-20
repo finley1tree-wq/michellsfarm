@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import pumpkins from "@/assets/pumpkins.jpg";
 
 export const Route = createFileRoute("/visit")({
