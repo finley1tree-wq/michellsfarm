@@ -89,6 +89,25 @@ function VisitPage() {
           </a>
         </div>
       </section>
+
+      {/* Contact nudge */}
+      <section className="border-t border-border bg-background py-20">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-6 px-6 lg:px-10">
+          <div className="max-w-2xl">
+            <div className="eyebrow text-moss">Questions?</div>
+            <h2 className="mt-3 text-3xl sm:text-4xl">Get in touch</h2>
+            <p className="mt-4 text-foreground/75">
+              Phone, email, or send us a note — we read everything that comes in.
+            </p>
+          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm text-cream hover:opacity-90"
+          >
+            Contact us
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
