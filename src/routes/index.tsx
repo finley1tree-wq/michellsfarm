@@ -7,6 +7,7 @@ import pumpkins from "@/assets/pumpkins.jpg";
 import berries from "@/assets/berries.jpg";
 import restaurant from "@/assets/restaurant.jpg";
 import nursery from "@/assets/nursery.jpg";
+import SeasonalCalendar from "@/components/site/SeasonalCalendar";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -155,6 +156,8 @@ function Home() {
       </section>
 
       {/* PUMPKIN MOMENT */}
+      <SeasonalCalendar />
+
       <section className="relative isolate overflow-hidden py-32">
         <img
           src={pumpkins}
