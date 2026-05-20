@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import produce from "@/assets/produce.jpg";
 import berries from "@/assets/berries.jpg";
 import cattle from "@/assets/cattle.jpg";
+import pantry from "@/assets/pantry.jpg";
+import christmas from "@/assets/christmas.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -123,17 +125,73 @@ function ProductsPage() {
         </article>
         <article className="overflow-hidden rounded-2xl border border-border bg-card">
           <div className="p-8">
-            <div className="eyebrow text-clay">Hay & straw</div>
-            <h3 className="mt-2 font-serif text-3xl">Michell-grown hay, locally grown straw</h3>
+            <div className="eyebrow text-clay">Hay, straw & compost</div>
+            <h3 className="mt-2 font-serif text-3xl">Agricultural supplies, grown & sourced locally</h3>
             <p className="mt-3 text-foreground/75">
-              Excellent quality 1st and 2nd cut hay for horses, sheep or any livestock.
-              Local barley straw for garden mulch, bedding or fall displays.
+              Excellent quality 1st and 2nd cut Michell-grown hay for horses, sheep or
+              any livestock. Local barley straw for garden mulch, bedding or fall
+              displays. Bagged compost and aged manure for your spring beds.
             </p>
             <p className="mt-4 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
               Pick up in store only — currently sold out of 2nd cut hay.
             </p>
           </div>
         </article>
+      </section>
+
+      {/* Pantry — eggs, honey, baked */}
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-12 lg:px-10">
+        <div className="lg:col-span-5">
+          <img src={pantry} alt="Fresh brown eggs, jars of honey and artisan bread loaves" loading="lazy"
+            className="w-full rounded-2xl object-cover" />
+        </div>
+        <div className="lg:col-span-7">
+          <div className="eyebrow text-clay">Daily in the market</div>
+          <h2 className="mt-3 text-4xl sm:text-5xl">Eggs, baked goods & honey</h2>
+          <p className="mt-4 text-foreground/75">
+            The everyday staples — sourced from people we know, baked fresh, and
+            delivered to our shelves while they're still warm.
+          </p>
+          <ul className="mt-8 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+            {[
+              "Fresh local farm eggs — brown, large",
+              "Free-run & organic eggs",
+              "Daily bread from Portofino Bakery",
+              "Cookies, pies & pastries from Irene's",
+              "Saanich Peninsula wildflower honey",
+              "Comb honey & creamed honey",
+              "Local jams, preserves & curds",
+              "Cowichan Valley butter & cheese",
+            ].map((v) => (
+              <li key={v} className="flex gap-3 border-b border-border/50 pb-3 text-sm text-foreground/85">
+                <span className="font-display text-accent">·</span>{v}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Christmas trees & holly */}
+      <section className="relative isolate overflow-hidden py-32">
+        <img src={christmas} alt="Snowy field of Christmas trees and holly bundles"
+          loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/85 via-primary/55 to-transparent" />
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="max-w-xl text-cream">
+            <div className="eyebrow text-cream/80">Every December</div>
+            <h2 className="mt-4 font-serif text-5xl sm:text-6xl">
+              Christmas trees<br /><span className="font-display">& fresh holly.</span>
+            </h2>
+            <p className="mt-6 text-lg text-cream/85">
+              Locally grown Douglas fir, grand fir and noble fir — cut fresh and stacked
+              by the market every December. Plus bundles of variegated and English holly
+              cut from our own hedges for wreaths and table settings.
+            </p>
+            <p className="mt-4 text-sm text-cream/70">
+              Available early December through Christmas Eve, while supplies last.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Local partners */}
