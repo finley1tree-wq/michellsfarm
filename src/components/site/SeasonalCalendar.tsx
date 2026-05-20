@@ -32,10 +32,29 @@ const STATUS_STYLES: Record<Status, string> = {
   out:  "bg-muted",
 };
 
-export default function SeasonalCalendar() {
+export default function SeasonalCalendar({ variant = "section" }: { variant?: "section" | "inline" } = {}) {
   const currentMonth = new Date().getMonth();
   const nowAvailable = PRODUCTS.filter((p) => p.schedule[currentMonth] === "in").map((p) => p.name);
   const comingSoon = PRODUCTS.filter((p) => p.schedule[currentMonth] === "soon").map((p) => p.name);
+
+  if (variant === "inline") {
+    return (
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-2xl border border-primary bg-primary p-6 text-cream shadow-lg shadow-primary/10">
+          <div className="eyebrow text-cream/80">Available now · {MONTHS_FULL[currentMonth]}</div>
+          <p className="mt-2 font-serif text-xl leading-snug">
+            {nowAvailable.length ? nowAvailable.join(" · ") : "Fields are resting — check back soon."}
+          </p>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-6">
+          <div className="eyebrow text-moss">Coming soon</div>
+          <p className="mt-2 font-serif text-xl leading-snug text-foreground/85">
+            {comingSoon.length ? comingSoon.join(" · ") : "Nothing new on the horizon this month."}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <section className="bg-background py-24">
