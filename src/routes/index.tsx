@@ -122,14 +122,18 @@ function Home() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <div className="eyebrow text-moss">From our fields</div>
-              <h2 className="mt-3 text-4xl sm:text-5xl">What you'll find this week</h2>
+              <h2 className="mt-3 text-4xl sm:text-5xl">What's in season</h2>
             </div>
             <Link to="/products" className="text-sm text-primary underline-offset-4 hover:underline">
               See everything we grow →
             </Link>
           </div>
 
-          <div className="mt-16 grid gap-6 lg:grid-cols-12 lg:grid-rows-2">
+          <div className="mt-10">
+            <SeasonalCalendar variant="inline" />
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-12 lg:grid-rows-2">
             <Feature
               className="lg:col-span-7 lg:row-span-2"
               image={produce}
@@ -156,8 +160,6 @@ function Home() {
       </section>
 
       {/* PUMPKIN MOMENT */}
-      <SeasonalCalendar />
-
       <section className="relative isolate overflow-hidden py-32">
         <img
           src={pumpkins}
