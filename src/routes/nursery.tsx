@@ -14,12 +14,15 @@ export const Route = createFileRoute("/nursery")({
 });
 
 const categories = [
-  ["Vegetable starts", "Tomatoes, peppers, cucumbers, squash, brassicas — grown from the same seed we use in the field."],
-  ["Herbs", "Basil, parsley, thyme, sage, rosemary, mint, oregano — kitchen-ready or in 4-inch pots to plant out."],
-  ["Bedding plants", "Annual colour by the flat — petunias, marigolds, snapdragons, lobelia, alyssum."],
-  ["Hanging baskets", "Custom-stuffed baskets and basket-stuffer six-packs to build your own."],
-  ["Perennials & shrubs", "Roses, hydrangeas, lavender, ornamental grasses and Pacific Northwest natives."],
-  ["Seeds", "Untreated vegetable, herb and flower seed for the home garden — including West Coast Seeds."],
+  ["Seeds"],
+  ["Veggie starts"],
+  ["Tomato plants"],
+  ["Bedding plants"],
+  ["Basket stuffers"],
+  ["Herbs"],
+  ["Roses"],
+  ["Shrubs"],
+  ["…and more"],
 ];
 
 function NurseryPage() {
@@ -42,15 +45,15 @@ function NurseryPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {categories.map(([title, body]) => (
-            <article key={title} className="rounded-2xl border border-border bg-card p-7">
-              <div className="eyebrow text-clay">Available now</div>
-              <h2 className="mt-2 font-serif text-2xl">{title}</h2>
-              <p className="mt-3 text-sm text-foreground/75">{body}</p>
-            </article>
+        <div className="eyebrow text-clay">What you'll find</div>
+        <h2 className="mt-3 text-3xl sm:text-4xl">A wonderful selection of plants</h2>
+        <ul className="mt-10 grid gap-3 sm:grid-cols-3 lg:grid-cols-3">
+          {categories.map(([title]) => (
+            <li key={title} className="rounded-2xl border border-border bg-card px-6 py-5 text-center font-serif text-xl">
+              {title}
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="bg-secondary/60 py-24">
@@ -59,7 +62,7 @@ function NurseryPage() {
             <div className="eyebrow text-moss">Visit the nursery</div>
             <h2 className="mt-3 font-serif text-4xl">Open every day, 9:30 — 5</h2>
             <p className="mt-4 text-foreground/75">
-              Path behind the market. Staff on-hand for planting advice.
+              Right behind the market, in the south-west corner of the parking lot.
             </p>
           </div>
           <dl className="grid grid-cols-2 gap-4 rounded-2xl bg-card p-8 text-sm">
