@@ -15,41 +15,33 @@ export const Route = createFileRoute("/recipes")({
 
 const recipes = [
   {
-    season: "Summer",
-    title: "Heirloom Tomato & Berry Salad",
-    time: "15 min",
-    body: "Sliced tomatoes, halved strawberries, torn basil, sea salt, a glug of olive oil and a splash of Snowdon House blackberry vinegar. That's it.",
+    author: "Celia Michell",
+    title: "Raspberry Muffins",
+    body: "2 cups flour, ½ cup sugar, 3 tsp baking powder, ½ tsp salt, 1 egg, 1 cup milk, ½ cup melted butter, 1 cup fresh or frozen raspberries. Mix dry, beat egg with milk and butter, combine and stir until moist. Fold in raspberries, fill muffin pan, bake at 425°F for 20 min. Dunk warm tops in melted butter, then sugar. Makes one dozen.",
   },
   {
-    season: "Autumn",
-    title: "Roasted Sugar Pumpkin Soup",
-    time: "1 hr",
-    body: "Halve and roast one of our sugar pumpkins with onion and garlic. Blend with stock, a knob of butter and a swirl of Berryman's bacon for the top.",
+    author: "Celia Michell",
+    title: "Leek & Potato Soup",
+    body: "12 cups water, 3 chicken bouillon cubes, 5 medium potatoes, 6 medium leeks (white parts, chopped), 2 carrots, 2 stalks celery, ½ cup light cream, 2 bay leaves, salt & pepper. Boil water with bouillon, add veg and bay leaves, simmer until tender (1 hr+). Remove bay, blend if you like, stir in cream and season. Reheat to serve.",
   },
   {
-    season: "Autumn",
-    title: "Brussels Sprouts on the Stalk",
-    time: "30 min",
-    body: "Snap sprouts from the stalk, halve, toss with olive oil, salt, maple. Roast hot until charred. Finish with a squeeze of lemon.",
+    author: "Nicole Verhagen",
+    title: "Kale Chips",
+    body: "1 bunch kale, 1 tbsp extra virgin olive oil, sea salt to taste. Wash and dry kale thoroughly. Remove thick stems, tear into bite-size pieces. Toss with oil, spread on a cookie sheet, season. Bake at 325°F for ~15 min, checking constantly — remove pieces as they're golden and firm. Try with balsamic, garlic powder or seasoning salt.",
   },
-  {
-    season: "Winter",
-    title: "Michell Beef Pot Roast",
-    time: "4 hrs",
-    body: "Sear a chuck roast, then braise low and slow with carrots, parsnips, celery root and onions. Serve over mashed potatoes.",
-  },
-  {
-    season: "Spring",
-    title: "Rhubarb & Honey Crisp",
-    time: "45 min",
-    body: "First-of-season rhubarb tossed with local honey, topped with an oat-and-butter crumble. Eat warm with Island Farms vanilla ice cream.",
-  },
-  {
-    season: "Year-round",
-    title: "Frozen Berry Smoothie",
-    time: "5 min",
-    body: "A handful of our frozen tayberries, a banana, plain yogurt, a spoon of honey, a splash of Cowichan milk. Blend.",
-  },
+];
+
+const hints = [
+  "Berries are perishable — process the day you buy them, especially in bad weather.",
+  "Freeze raspberries & hulled strawberries right in the containers they come in, then bag later.",
+  "Handle cauliflower carefully — it marks easily and bruises in the centre of the head.",
+  "A slightly discoloured cauliflower can be whitened by adding a tsp of milk or lemon juice to the cooking water.",
+  "To tell if corn is ripe, look at the tassel and feel the top of the cob — the darker the tassel, the riper the corn.",
+  "Freeze corn on the cob: pull off a few outer husk layers, trim the tassels, bag and freeze. Or husk, blanch until colour changes, ice-bath, dry and bag.",
+  "Squash & pumpkin freeze well — just prepare as usual and freeze any leftovers in containers.",
+  "For most vegetables, blanch only until you see a colour change, then ice-bath, dry and freeze.",
+  "Brussels sprouts keep for weeks on the stalk — stand them in a bucket with a little water outside, away from critters.",
+  "Leeks are mild and easy — boil them tender, or use in cream sauces, around roasts, or in salads in place of onions.",
 ];
 
 function RecipesPage() {
@@ -74,19 +66,27 @@ function RecipesPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {recipes.map((r) => (
             <article key={r.title} className="group rounded-2xl border border-border bg-card p-7 transition-colors hover:border-accent">
-              <div className="flex items-center justify-between">
-                <span className="eyebrow text-clay">{r.season}</span>
-                <span className="text-xs text-muted-foreground">{r.time}</span>
-              </div>
+              <div className="eyebrow text-clay">From {r.author}</div>
               <h2 className="mt-3 font-serif text-2xl">{r.title}</h2>
               <p className="mt-3 text-sm text-foreground/75">{r.body}</p>
             </article>
           ))}
         </div>
+      </section>
 
-        <p className="mt-16 text-center text-sm text-muted-foreground">
-          Printed recipe cards available in the market, beside whatever's in peak season.
-        </p>
+      <section className="border-t border-border bg-secondary/60 py-24">
+        <div className="mx-auto max-w-4xl px-6 lg:px-10">
+          <div className="eyebrow text-moss">Helpful hints from the Michells</div>
+          <h2 className="mt-3 font-serif text-3xl sm:text-4xl">Tips from the farm</h2>
+          <ol className="mt-10 space-y-4">
+            {hints.map((h, i) => (
+              <li key={i} className="flex gap-4 border-b border-border/50 pb-4 text-sm text-foreground/85">
+                <span className="font-display text-2xl text-accent leading-none">{i + 1}.</span>
+                <span>{h}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
     </>
   );
