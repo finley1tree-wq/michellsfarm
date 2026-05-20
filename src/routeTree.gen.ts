@@ -13,6 +13,7 @@ import { Route as VisitRouteImport } from './routes/visit'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RecipesRouteImport } from './routes/recipes'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as NurseryRouteImport } from './routes/nursery'
 import { Route as HarvestRdRouteImport } from './routes/harvest-rd'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -36,6 +37,11 @@ const RecipesRoute = RecipesRouteImport.update({
 const ProductsRoute = ProductsRouteImport.update({
   id: '/products',
   path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NurseryRoute = NurseryRouteImport.update({
+  id: '/nursery',
+  path: '/nursery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HarvestRdRoute = HarvestRdRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/harvest-rd': typeof HarvestRdRoute
+  '/nursery': typeof NurseryRoute
   '/products': typeof ProductsRoute
   '/recipes': typeof RecipesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/harvest-rd': typeof HarvestRdRoute
+  '/nursery': typeof NurseryRoute
   '/products': typeof ProductsRoute
   '/recipes': typeof RecipesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/harvest-rd': typeof HarvestRdRoute
+  '/nursery': typeof NurseryRoute
   '/products': typeof ProductsRoute
   '/recipes': typeof RecipesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/harvest-rd'
+    | '/nursery'
     | '/products'
     | '/recipes'
     | '/sitemap.xml'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/harvest-rd'
+    | '/nursery'
     | '/products'
     | '/recipes'
     | '/sitemap.xml'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/harvest-rd'
+    | '/nursery'
     | '/products'
     | '/recipes'
     | '/sitemap.xml'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   HarvestRdRoute: typeof HarvestRdRoute
+  NurseryRoute: typeof NurseryRoute
   ProductsRoute: typeof ProductsRoute
   RecipesRoute: typeof RecipesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/products'
       fullPath: '/products'
       preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nursery': {
+      id: '/nursery'
+      path: '/nursery'
+      fullPath: '/nursery'
+      preLoaderRoute: typeof NurseryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/harvest-rd': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   HarvestRdRoute: HarvestRdRoute,
+  NurseryRoute: NurseryRoute,
   ProductsRoute: ProductsRoute,
   RecipesRoute: RecipesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
