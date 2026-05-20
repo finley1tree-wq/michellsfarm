@@ -167,7 +167,7 @@ function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent" />
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="max-w-xl text-cream">
-            <div className="eyebrow text-cream/80">Every October</div>
+            <div className="eyebrow text-cream/80">Every fall</div>
             <h2 className="mt-4 font-serif text-5xl sm:text-6xl">
               The <span className="font-display">U-Pick</span><br />Pumpkin Patch
             </h2>

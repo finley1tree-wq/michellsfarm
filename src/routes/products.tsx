@@ -3,7 +3,6 @@ import produce from "@/assets/produce.jpg";
 import berries from "@/assets/berries.jpg";
 import cattle from "@/assets/cattle.jpg";
 import pantry from "@/assets/pantry.jpg";
-import christmas from "@/assets/christmas.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -148,41 +147,20 @@ function ProductsPage() {
           <h2 className="mt-3 text-4xl sm:text-5xl">Eggs, baked goods & honey</h2>
           <ul className="mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {[
-              "Fresh local farm eggs — brown, large",
-              "Free-run & organic eggs",
-              "Daily bread from Portofino Bakery",
-              "Cookies, pies & pastries from Irene's",
-              "Saanich Peninsula wildflower honey",
-              "Comb honey & creamed honey",
-              "Local jams, preserves & curds",
-              "Cowichan Valley butter & cheese",
+              "Local free-run & free-range eggs",
+              "Locally raised roasting chickens",
+              "Portofino & Irene's Bakery breads & pastries",
+              "Local honey",
+              "Jenni's Jam",
+              "Grandma Walser's Pepper Jelly",
+              "Local cheeses & Cowichan Milk",
+              "Island Farms dairy products",
             ].map((v) => (
               <li key={v} className="flex gap-3 border-b border-border/50 pb-3 text-sm text-foreground/85">
                 <span className="font-display text-accent">·</span>{v}
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Christmas trees & holly */}
-      <section className="relative isolate overflow-hidden py-32">
-        <img src={christmas} alt="Snowy field of Christmas trees and holly bundles"
-          loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary/85 via-primary/55 to-transparent" />
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="max-w-xl text-cream">
-            <div className="eyebrow text-cream/80">Every December</div>
-            <h2 className="mt-4 font-serif text-5xl sm:text-6xl">
-              Christmas trees<br /><span className="font-display">& fresh holly.</span>
-            </h2>
-            <p className="mt-6 text-lg text-cream/85">
-              Fresh-cut Douglas, grand & noble fir, plus bundles of holly from our hedges.
-            </p>
-            <p className="mt-3 text-sm text-cream/70">
-              Early December through Christmas Eve, while supplies last.
-            </p>
-          </div>
         </div>
       </section>
 
