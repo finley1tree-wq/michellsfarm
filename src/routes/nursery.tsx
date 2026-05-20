@@ -36,8 +36,7 @@ function NurseryPage() {
             <span className="font-display">Plants.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/85">
-            Our greenhouse nursery, just behind the market. Veggie starts, herbs,
-            bedding plants and hanging baskets — grown by us, ready for your garden.
+            Greenhouse nursery behind the market. Grown by us, ready for your garden.
           </p>
         </div>
       </section>
@@ -60,8 +59,7 @@ function NurseryPage() {
             <div className="eyebrow text-moss">Visit the nursery</div>
             <h2 className="mt-3 font-serif text-4xl">Open every day, 9:30 — 5</h2>
             <p className="mt-4 text-foreground/75">
-              Follow the path behind the market building. Knowledgeable staff are around
-              if you'd like advice on what to plant, when, and how much sun it wants.
+              Path behind the market. Staff on-hand for planting advice.
             </p>
           </div>
           <dl className="grid grid-cols-2 gap-4 rounded-2xl bg-card p-8 text-sm">

@@ -29,9 +29,7 @@ function VisitPage() {
             <div className="eyebrow text-clay">The market</div>
             <h2 className="mt-2 font-serif text-3xl">Open seven days a week</h2>
             <p className="mt-3 text-foreground/75">
-              You'll find seasonal produce grown right here on Michell's, plus produce
-              from neighbouring farms and a market full of local baked goods, honey,
-              vinegars and more.
+              Our produce, neighbours' produce, local baked goods, honey & more.
             </p>
           </div>
           <dl className="grid grid-cols-2 gap-4 border-t border-border pt-6 text-sm">
@@ -54,8 +52,7 @@ function VisitPage() {
             <div className="eyebrow text-cream/80">Every fall</div>
             <h3 className="mt-2 font-serif text-3xl">U-Pick Pumpkin Patch</h3>
             <p className="mt-2 max-w-sm text-cream/85">
-              A Peninsula tradition — open every October. Wagon rides, sugar pumpkins
-              and a field that goes on as far as a kid can run.
+              Open every October. Wagon rides and a field full of pumpkins.
             </p>
           </div>
         </div>
@@ -78,10 +75,7 @@ function VisitPage() {
             className="group rounded-2xl border border-border bg-card p-8 transition-colors hover:border-accent">
             <div className="eyebrow text-clay">Right next door</div>
             <h3 className="mt-2 font-serif text-3xl">Harvest Rd — Farm to Table Grill</h3>
-            <p className="mt-3 text-foreground/75">
-              Seasonal menus inspired by the freshest local ingredients, located on the
-              Lochside Trail beside our market. Open every day 10—5.
-            </p>
+            <p className="mt-3 text-foreground/75">Open every day 10—5.</p>
             <span className="mt-4 inline-block text-sm text-accent">See the menu →</span>
           </a>
           <a href="/nursery"
@@ -89,8 +83,7 @@ function VisitPage() {
             <div className="eyebrow text-clay">Behind the market</div>
             <h3 className="mt-2 font-serif text-3xl">Michell Valley Plants</h3>
             <p className="mt-3 text-foreground/75">
-              Seeds, veggie starts, tomato plants, bedding plants, basket stuffers,
-              herbs, roses and shrubs. Open every day 9:30—5. Call 250-886-0494.
+              Veggie starts, herbs, baskets, shrubs. Open daily 9:30—5.
             </p>
             <span className="mt-4 inline-block text-sm text-accent">Visit the nursery →</span>
           </a>

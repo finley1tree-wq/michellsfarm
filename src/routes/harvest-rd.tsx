@@ -28,9 +28,7 @@ function HarvestRdPage() {
             <span className="font-display">Farm-to-table grill.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/85">
-            A casual sit-down grill on the Lochside Trail, right beside the market.
-            Seasonal menus built from the field next door — and from neighbours we know
-            on Vancouver Island.
+            Beside the market on the Lochside Trail. Seasonal menus from the field next door.
           </p>
         </div>
       </section>
@@ -41,10 +39,7 @@ function HarvestRdPage() {
             <div className="eyebrow text-clay">The menu</div>
             <h2 className="mt-2 font-serif text-4xl">Built from the field next door</h2>
             <p className="mt-4 text-foreground/75">
-              Our chefs walk across the gravel to the market every morning to see what
-              came in. The menu changes with the season — sometimes weekly. Expect
-              Michell beef burgers, salads bursting with heirloom tomatoes, soups from
-              roasted squash, and desserts built around whichever berry is at peak.
+              Menu changes with the season. A taste of what's on now:
             </p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">
@@ -95,8 +90,7 @@ function HarvestRdPage() {
             The shortest <span className="font-display">supply chain</span> in town.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
-            The tomato on your plate was on the vine this morning, three hundred feet
-            away. That's the whole pitch.
+            The tomato on your plate was on the vine this morning, 300 feet away.
           </p>
         </div>
       </section>
