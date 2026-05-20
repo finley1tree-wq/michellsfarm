@@ -65,8 +65,7 @@ function RecipesPage() {
             What to do with <span className="font-display">a basket of it.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/85">
-            Six generations of cooks have figured out what to do with everything that
-            comes out of these fields. Here are some of the recipes we keep coming back to.
+            Simple ideas for whatever's in your basket this week.
           </p>
         </div>
       </section>
@@ -85,14 +84,9 @@ function RecipesPage() {
           ))}
         </div>
 
-        <div className="mt-20 rounded-2xl bg-secondary/60 p-8 text-center lg:p-12">
-          <div className="eyebrow text-moss">In the market</div>
-          <h3 className="mt-2 font-serif text-3xl">Pick up a printed recipe card</h3>
-          <p className="mx-auto mt-3 max-w-xl text-foreground/75">
-            Our market staff post new recipe cards next to whatever's in peak season —
-            grab one on your way through.
-          </p>
-        </div>
+        <p className="mt-16 text-center text-sm text-muted-foreground">
+          Printed recipe cards available in the market, beside whatever's in peak season.
+        </p>
       </section>
     </>
   );
