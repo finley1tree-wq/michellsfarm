@@ -59,10 +59,7 @@ export function Header() {
                 key={n.to}
                 to={n.to}
                 resetScroll
-                onClick={() => {
-                  setOpen(false);
-                  if (n.to === "/") scrollHomeToTop();
-                }}
+                onClick={() => setOpen(false)}
                 className="rounded-md px-2 py-3 text-base hover:bg-secondary"
                 activeProps={{ className: "text-primary font-medium" }}
                 activeOptions={{ exact: n.to === "/" }}
