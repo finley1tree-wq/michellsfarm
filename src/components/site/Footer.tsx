@@ -73,7 +73,6 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm">
             <li><Link to="/about" className="hover:underline">Our story</Link></li>
             <li><Link to="/products" className="hover:underline">What we grow</Link></li>
-            <li><Link to="/recipes" className="hover:underline">Recipes</Link></li>
             <li><Link to="/harvest-rd" className="hover:underline">Harvest Rd grill</Link></li>
             <li><Link to="/nursery" className="hover:underline">Michell Valley Plants</Link></li>
             <li><Link to="/visit" className="hover:underline">Plan a visit</Link></li>

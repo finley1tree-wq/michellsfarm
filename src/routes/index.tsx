@@ -159,20 +159,6 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
-          <div className="eyebrow text-moss">From our neighbours</div>
-          <blockquote className="mt-6 font-serif text-3xl leading-snug text-foreground sm:text-4xl">
-            "A Saanich institution. The corn is unreal, the pumpkin patch is a
-            family tradition, and you can't beat their berries in July."
-          </blockquote>
-          <p className="mt-6 text-sm text-foreground/60">
-            — Local visitor · Google review
-          </p>
-        </div>
-      </section>
-
       {/* PUMPKIN MOMENT */}
       <section className="relative isolate overflow-hidden py-32">
         <img
