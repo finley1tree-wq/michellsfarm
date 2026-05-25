@@ -5,10 +5,21 @@ export function ScrollToTop() {
   const router = useRouter();
 
   useEffect(() => {
-    const unsub = router.subscribe("onResolved", () => {
+    if (typeof window === "undefined") return;
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    const scrollTop = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    });
-    return () => unsub();
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+    const unsubResolved = router.subscribe("onResolved", scrollTop);
+    const unsubBefore = router.subscribe("onBeforeNavigate", scrollTop);
+    return () => {
+      unsubResolved();
+      unsubBefore();
+    };
   }, [router]);
 
   return null;
