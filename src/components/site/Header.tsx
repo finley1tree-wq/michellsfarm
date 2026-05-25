@@ -27,7 +27,6 @@ export function Header() {
               key={n.to}
               to={n.to}
               resetScroll
-              onClick={n.to === "/" ? scrollHomeToTop : undefined}
               className="text-sm text-foreground/80 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary font-medium" }}
               activeOptions={{ exact: n.to === "/" }}
