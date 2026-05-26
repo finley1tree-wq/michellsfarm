@@ -4,9 +4,9 @@ import { Phone, Mail, MapPin, Printer } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Mitchell's Farm Market" },
-      { name: "description", content: "Get in touch with Mitchell's Farm Market in Saanichton, BC. Phone (250) 652-6770 or email market@michellsfarm.com." },
-      { property: "og:title", content: "Contact Mitchell's Farm" },
+      { title: "Contact — Michell's Farm Market" },
+      { name: "description", content: "Get in touch with Michell's Farm Market in Saanichton, BC. Phone (250) 652-6770 or email market@michellsfarm.com." },
+      { property: "og:title", content: "Contact Michell's Farm" },
       { property: "og:description", content: "Reach the farm market by phone, email or in person." },
     ],
   }),

@@ -4,9 +4,9 @@ import nurseryImg from "@/assets/nursery.jpg";
 export const Route = createFileRoute("/nursery")({
   head: () => ({
     meta: [
-      { title: "Mitchell Valley Plants — The Nursery at Mitchell's Farm" },
+      { title: "Michell Valley Plants — The Nursery at Michell's Farm" },
       { name: "description", content: "Veggie starts, tomato plants, bedding plants, herbs, hanging baskets, roses and shrubs. Open every day 9:30—5 behind the market." },
-      { property: "og:title", content: "Mitchell Valley Plants" },
+      { property: "og:title", content: "Michell Valley Plants" },
       { property: "og:description", content: "Seeds, veggie starts, herbs, hanging baskets, roses and shrubs — open daily." },
     ],
   }),
@@ -29,13 +29,13 @@ function NurseryPage() {
   return (
     <>
       <section className="relative isolate overflow-hidden">
-        <img src={nurseryImg} alt="Greenhouse rows of vegetable starts and herbs at Mitchell Valley Plants"
+        <img src={nurseryImg} alt="Greenhouse rows of vegetable starts and herbs at Michell Valley Plants"
           className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/55 via-primary/35 to-background" />
         <div className="mx-auto max-w-7xl px-6 pb-24 pt-28 lg:px-10 lg:pb-32 lg:pt-40">
           <div className="eyebrow text-cream/85">Behind the market</div>
           <h1 className="mt-6 max-w-3xl font-serif text-5xl text-cream sm:text-7xl">
-            Mitchell Valley<br />
+            Michell Valley<br />
             <span className="font-display">Plants.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-cream/85">

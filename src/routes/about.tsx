@@ -5,9 +5,9 @@ import field from "@/assets/hero-field.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Our Story — Mitchell's Farm, est. 1862" },
-      { name: "description", content: "Six generations of the Mitchell family have farmed the Saanich Peninsula since 1862. From William Mitchell's first 100 acres to today's 400+ acre family operation." },
-      { property: "og:title", content: "Our Story — Mitchell's Farm" },
+      { title: "Our Story — Michell's Farm, est. 1862" },
+      { name: "description", content: "Six generations of the Michell family have farmed the Saanich Peninsula since 1862. From William Michell's first 100 acres to today's 400+ acre family operation." },
+      { property: "og:title", content: "Our Story — Michell's Farm" },
       { property: "og:description", content: "Six generations on the same Saanich Peninsula soil." },
     ],
   }),
@@ -28,19 +28,19 @@ function AboutPage() {
         <div className="lg:col-span-5">
           <img
             src={heritage}
-            alt="Vintage photograph of the Mitchell family on their original farm"
+            alt="Vintage photograph of the Michell family on their original farm"
             width={1200}
             height={1500}
             loading="lazy"
             className="w-full rounded-2xl object-cover shadow-lg shadow-primary/10"
           />
           <p className="mt-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            The Mitchell family · Saanich Peninsula, late 1800s
+            The Michell family · Saanich Peninsula, late 1800s
           </p>
         </div>
         <div className="space-y-6 text-lg leading-relaxed text-foreground/85 lg:col-span-7">
           <p>
-            Mitchell's Farm was started in the 1860s by William Mitchell, who bought a
+            Michell's Farm was started in the 1860s by William Michell, who bought a
             100-acre parcel on the Saanich Peninsula with the money he'd made in the
             Cariboo gold rush. He planted potatoes. Lots of them.
           </p>
@@ -51,7 +51,7 @@ function AboutPage() {
             nematode. The local farming community took a hit.
           </p>
           <p>
-            For the Mitchells, the ban became the push to diversify. The family
+            For the Michells, the ban became the push to diversify. The family
             experimented — beets, brassicas, brassicas again, corn, squash, peas — and
             slowly built the wide-ranging vegetable operation you'll find on our shelves
             today.
@@ -59,7 +59,7 @@ function AboutPage() {
           <p>
             The farm has grown to 400+ acres (with another 100+ leased) and now produces
             over four thousand tonnes of food a year. It's still owned and worked by the
-            Mitchell family, six generations in.
+            Michell family, six generations in.
           </p>
         </div>
       </section>
@@ -69,7 +69,7 @@ function AboutPage() {
         <div className="absolute inset-0 -z-10 bg-primary/85" />
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 text-cream lg:grid-cols-4 lg:px-10">
           {[
-            ["1862", "Year William Mitchell broke ground"],
+            ["1862", "Year William Michell broke ground"],
             ["6", "Generations farming the same land"],
             ["400+", "Acres under cultivation today"],
             ["50+", "Varieties of fruit & vegetables grown"],
