@@ -12,7 +12,7 @@ import SeasonalCalendar from "@/components/site/SeasonalCalendar";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mitchell's Farm — Sixth-generation farm market on the Saanich Peninsula" },
+      { title: "Michell's Farm — Sixth-generation farm market on the Saanich Peninsula" },
       { name: "description", content: "Visit our farm market for seasonal produce, pasture-raised beef, fresh berries and our famous U-Pick pumpkin patch. Open 7 days, 9-5." },
     ],
   }),
@@ -26,7 +26,7 @@ function Home() {
       <section className="relative isolate overflow-hidden">
         <img
           src={hero}
-          alt="Sunset over Mitchell's farm fields on the Saanich Peninsula"
+          alt="Sunset over Michell's farm fields on the Saanich Peninsula"
           width={1920}
           height={1280}
           className="absolute inset-0 -z-10 h-full w-full object-cover"
@@ -90,7 +90,7 @@ function Home() {
             <h2 className="mt-3 text-4xl sm:text-5xl">More to explore next door</h2>
             <p className="mt-5 text-lg text-foreground/75">
               Right beside the farm market you'll find Harvest Rd — our farm-to-table
-              grill — and Mitchell Valley Plants, our working nursery. All part of the
+              grill — and Michell Valley Plants, our working nursery. All part of the
               family, all on Island View Rd.
             </p>
           </div>
@@ -107,7 +107,7 @@ function Home() {
             <BizCard
               image={nursery}
               eyebrow="The Nursery"
-              title="Mitchell Valley Plants"
+              title="Michell Valley Plants"
               body="Veggie starts, bedding plants, herbs & perennials. Spring through fall."
               to="/nursery"
               cta="Visit the nursery"
