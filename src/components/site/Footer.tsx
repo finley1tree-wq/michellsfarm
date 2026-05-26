@@ -43,13 +43,13 @@ export function Footer() {
       </div>
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-4 lg:px-10">
         <div className="lg:col-span-2">
-          <div className="font-display text-4xl tracking-tight">Michell's Farm</div>
+          <div className="font-display text-4xl tracking-tight">Mitchell's Farm</div>
           <p className="mt-3 max-w-md text-sm text-primary-foreground/70">
             Six generations of farming on the Saanich Peninsula. Growing real food
             for our neighbours since 1862.
           </p>
           <div className="mt-6 flex gap-3">
-            <a href="https://www.facebook.com/Michellsfarm" target="_blank" rel="noreferrer"
+            <a href="https://www.facebook.com/Mitchellsfarm" target="_blank" rel="noreferrer"
               className="rounded-full border border-primary-foreground/30 p-2 hover:bg-primary-foreground/10">
               <Facebook className="h-4 w-4" />
             </a>
@@ -74,7 +74,7 @@ export function Footer() {
             <li><Link to="/about" className="hover:underline">Our story</Link></li>
             <li><Link to="/products" className="hover:underline">What we grow</Link></li>
             <li><Link to="/harvest-rd" className="hover:underline">Harvest Rd grill</Link></li>
-            <li><Link to="/nursery" className="hover:underline">Michell Valley Plants</Link></li>
+            <li><Link to="/nursery" className="hover:underline">Mitchell Valley Plants</Link></li>
             <li><Link to="/visit" className="hover:underline">Plan a visit</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact</Link></li>
           </ul>
@@ -82,7 +82,7 @@ export function Footer() {
       </div>
       <div className="border-t border-primary-foreground/15">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-6 py-5 text-xs text-primary-foreground/55 lg:px-10">
-          <span>© {new Date().getFullYear()} Michell's Farm Market. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Mitchell's Farm Market. All rights reserved.</span>
           <span>Grown on the Saanich Peninsula · Vancouver Island</span>
         </div>
       </div>

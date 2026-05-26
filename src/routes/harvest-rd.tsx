@@ -4,7 +4,7 @@ import restaurantImg from "@/assets/restaurant.jpg";
 export const Route = createFileRoute("/harvest-rd")({
   head: () => ({
     meta: [
-      { title: "Harvest Rd — Farm-to-Table Grill at Michell's Farm" },
+      { title: "Harvest Rd — Farm-to-Table Grill at Mitchell's Farm" },
       { name: "description", content: "A farm-to-table grill right beside the market on the Lochside Trail. Seasonal menus built from the field next door. Open 10—5 every day." },
       { property: "og:title", content: "Harvest Rd — Farm-to-Table Grill" },
       { property: "og:description", content: "Seasonal menus inspired by the freshest local ingredients, right beside the market." },

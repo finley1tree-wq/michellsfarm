@@ -7,9 +7,9 @@ import pantry from "@/assets/pantry.jpg";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "What We Grow — Michell's Farm" },
+      { title: "What We Grow — Mitchell's Farm" },
       { name: "description", content: "Seasonal vegetables, fresh berries, pasture-raised beef, hay and straw, plus the best local goods from our neighbours on Vancouver Island." },
-      { property: "og:title", content: "What We Grow — Michell's Farm" },
+      { property: "og:title", content: "What We Grow — Mitchell's Farm" },
       { property: "og:description", content: "50+ vegetables, six kinds of berries, pasture-raised beef and the best of Vancouver Island." },
     ],
   }),
@@ -114,7 +114,7 @@ function ProductsPage() {
         <article className="overflow-hidden rounded-2xl bg-card">
           <img src={cattle} alt="Cattle grazing in pasture" loading="lazy" className="h-72 w-full object-cover" />
           <div className="p-8">
-            <div className="eyebrow text-clay">Michell beef</div>
+            <div className="eyebrow text-clay">Mitchell beef</div>
             <h3 className="mt-2 font-serif text-3xl">Pasture-raised, hormone & antibiotic free</h3>
             <p className="mt-3 text-foreground/75">
               Grazed on the fields off Island View Rd. Sold fresh and frozen, year-round.
@@ -126,7 +126,7 @@ function ProductsPage() {
             <div className="eyebrow text-clay">Hay, straw & compost</div>
             <h3 className="mt-2 font-serif text-3xl">Agricultural supplies, grown & sourced locally</h3>
             <p className="mt-3 text-foreground/75">
-              1st & 2nd cut Michell-grown hay, local barley straw, bagged compost
+              1st & 2nd cut Mitchell-grown hay, local barley straw, bagged compost
               and aged manure, plus bagged bark mulch.
             </p>
             <p className="mt-4 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
