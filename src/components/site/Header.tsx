@@ -19,7 +19,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link to="/" resetScroll className="group flex items-baseline gap-2">
-          <span className="font-display text-2xl tracking-tight text-primary">Michell's</span>
+          <span className="font-display text-2xl tracking-tight text-primary">Mitchell's</span>
           <span className="eyebrow hidden text-muted-foreground sm:inline">Farm · est. 1862</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">

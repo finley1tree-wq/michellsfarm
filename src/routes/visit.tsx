@@ -4,9 +4,9 @@ import pumpkins from "@/assets/pumpkins.jpg";
 export const Route = createFileRoute("/visit")({
   head: () => ({
     meta: [
-      { title: "Visit — Michell's Farm Market" },
+      { title: "Visit — Mitchell's Farm Market" },
       { name: "description", content: "Find us at 2451 Island View Rd, right on the Lochside Trail. Open seven days a week, 9-5. Plus the U-Pick pumpkin patch every fall." },
-      { property: "og:title", content: "Visit Michell's Farm" },
+      { property: "og:title", content: "Visit Mitchell's Farm" },
       { property: "og:description", content: "On the Lochside Trail in Saanichton. Open 7 days a week, 9-5." },
     ],
   }),
@@ -61,7 +61,7 @@ function VisitPage() {
       <section className="mx-auto max-w-7xl px-6 pb-32 lg:px-10">
         <div className="overflow-hidden rounded-2xl border border-border">
           <iframe
-            title="Map to Michell's Farm Market"
+            title="Map to Mitchell's Farm Market"
             src="https://www.google.com/maps?q=2451+Island+View+Rd,+Saanichton,+BC&output=embed"
             width="100%" height="450" loading="lazy" className="block w-full"
           />
@@ -81,7 +81,7 @@ function VisitPage() {
           <a href="/nursery"
             className="group rounded-2xl border border-border bg-card p-8 transition-colors hover:border-accent">
             <div className="eyebrow text-clay">Behind the market</div>
-            <h3 className="mt-2 font-serif text-3xl">Michell Valley Plants</h3>
+            <h3 className="mt-2 font-serif text-3xl">Mitchell Valley Plants</h3>
             <p className="mt-3 text-foreground/75">
               Veggie starts, herbs, baskets, shrubs. Open daily 9:30—5.
             </p>
