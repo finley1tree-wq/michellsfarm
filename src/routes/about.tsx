@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import heritage from "@/assets/heritage.jpg";
 import field from "@/assets/hero-field.jpg";
 
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "Our Story — Michell's Farm, est. 1862" },
-      { name: "description", content: "Six generations of the Michell family have farmed the Saanich Peninsula since 1862. From William Michell's first 100 acres to today's 400+ acre family operation." },
-      { property: "og:title", content: "Our Story — Michell's Farm" },
-      { property: "og:description", content: "Six generations on the same Saanich Peninsula soil." },
-    ],
-  }),
-  component: AboutPage,
-});
-
-function AboutPage() {
+export function AboutPage() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pt-32">

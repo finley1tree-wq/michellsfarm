@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/components/site/AppLink";
 import { ArrowUpRight, MapPin, Clock, Leaf } from "lucide-react";
 import hero from "@/assets/hero-field.jpg";
 import produce from "@/assets/produce.jpg";
@@ -9,17 +9,7 @@ import restaurant from "@/assets/restaurant.jpg";
 import nursery from "@/assets/nursery.jpg";
 import SeasonalCalendar from "@/components/site/SeasonalCalendar";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Michell's Farm — Sixth-generation farm market on the Saanich Peninsula" },
-      { name: "description", content: "Visit our farm market for seasonal produce, pasture-raised beef, fresh berries and our famous U-Pick pumpkin patch. Open 7 days, 9-5." },
-    ],
-  }),
-  component: Home,
-});
-
-function Home() {
+export function Home() {
   return (
     <>
       {/* HERO */}
