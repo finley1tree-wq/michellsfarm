@@ -9,91 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as VisitRouteImport } from './routes/visit'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as NurseryRouteImport } from './routes/nursery'
-import { Route as HarvestRdRouteImport } from './routes/harvest-rd'
-import { Route as ContactRouteImport } from './routes/contact'
 
-const VisitRoute = VisitRouteImport.update({
-  id: '/visit',
-  path: '/visit',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const NurseryRoute = NurseryRouteImport.update({
-  id: '/nursery',
-  path: '/nursery',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HarvestRdRoute = HarvestRdRouteImport.update({
-  id: '/harvest-rd',
-  path: '/harvest-rd',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
-  '/contact': typeof ContactRoute
-  '/harvest-rd': typeof HarvestRdRoute
-  '/nursery': typeof NurseryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/visit': typeof VisitRoute
 }
 export interface FileRoutesByTo {
-  '/contact': typeof ContactRoute
-  '/harvest-rd': typeof HarvestRdRoute
-  '/nursery': typeof NurseryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/visit': typeof VisitRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/contact': typeof ContactRoute
-  '/harvest-rd': typeof HarvestRdRoute
-  '/nursery': typeof NurseryRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/visit': typeof VisitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/contact' | '/harvest-rd' | '/nursery' | '/sitemap.xml' | '/visit'
+  fullPaths: '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/contact' | '/harvest-rd' | '/nursery' | '/sitemap.xml' | '/visit'
-  id:
-    | '__root__'
-    | '/contact'
-    | '/harvest-rd'
-    | '/nursery'
-    | '/sitemap.xml'
-    | '/visit'
+  to: '/sitemap.xml'
+  id: '__root__' | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  ContactRoute: typeof ContactRoute
-  HarvestRdRoute: typeof HarvestRdRoute
-  NurseryRoute: typeof NurseryRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  VisitRoute: typeof VisitRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/visit': {
-      id: '/visit'
-      path: '/visit'
-      fullPath: '/visit'
-      preLoaderRoute: typeof VisitRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -101,36 +48,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/nursery': {
-      id: '/nursery'
-      path: '/nursery'
-      fullPath: '/nursery'
-      preLoaderRoute: typeof NurseryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/harvest-rd': {
-      id: '/harvest-rd'
-      path: '/harvest-rd'
-      fullPath: '/harvest-rd'
-      preLoaderRoute: typeof HarvestRdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  ContactRoute: ContactRoute,
-  HarvestRdRoute: HarvestRdRoute,
-  NurseryRoute: NurseryRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  VisitRoute: VisitRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
