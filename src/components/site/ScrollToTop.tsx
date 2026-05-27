@@ -1,11 +1,7 @@
 import { useEffect } from "react";
-import { useRouter } from "@tanstack/react-router";
 
 export function ScrollToTop() {
-  const router = useRouter();
-
   useEffect(() => {
-    if (typeof window === "undefined") return;
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
@@ -14,13 +10,13 @@ export function ScrollToTop() {
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
     };
-    const unsubResolved = router.subscribe("onResolved", scrollTop);
-    const unsubBefore = router.subscribe("onBeforeNavigate", scrollTop);
+    window.addEventListener("app:navigate", scrollTop);
+    window.addEventListener("popstate", scrollTop);
     return () => {
-      unsubResolved();
-      unsubBefore();
+      window.removeEventListener("app:navigate", scrollTop);
+      window.removeEventListener("popstate", scrollTop);
     };
-  }, [router]);
+  }, []);
 
   return null;
 }

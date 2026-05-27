@@ -1,20 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import restaurantImg from "@/assets/restaurant.jpg";
 
-export const Route = createFileRoute("/harvest-rd")({
-  head: () => ({
-    meta: [
-      { title: "Harvest Rd — Farm-to-Table Grill at Michell's Farm" },
-      { name: "description", content: "A farm-to-table grill right beside the market on the Lochside Trail. Seasonal menus built from the field next door. Open 10—5 every day." },
-      { property: "og:title", content: "Harvest Rd — Farm-to-Table Grill" },
-      { property: "og:description", content: "Seasonal menus inspired by the freshest local ingredients, right beside the market." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/8a11ebfe-f61c-42b2-8fc5-11a0dc027d57" },
-    ],
-  }),
-  component: HarvestRdPage,
-});
-
-function HarvestRdPage() {
+export function HarvestRdPage() {
   return (
     <>
       <section className="relative isolate overflow-hidden">

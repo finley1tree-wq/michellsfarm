@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { Link } from "@/components/site/AppLink";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const nav = [
@@ -14,11 +14,22 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [path, setPath] = useState(() => window.location.pathname);
+
+  useEffect(() => {
+    const updatePath = () => setPath(window.location.pathname);
+    window.addEventListener("popstate", updatePath);
+    window.addEventListener("app:navigate", updatePath);
+    return () => {
+      window.removeEventListener("popstate", updatePath);
+      window.removeEventListener("app:navigate", updatePath);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link to="/" resetScroll className="group flex items-baseline gap-2">
+        <Link to="/" className="group flex items-baseline gap-2">
           <span className="font-display text-2xl tracking-tight text-primary">Michell's</span>
           <span className="eyebrow hidden text-muted-foreground sm:inline">Farm · est. 1862</span>
         </Link>
@@ -27,10 +38,7 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              resetScroll
-              className="text-sm text-foreground/80 transition-colors hover:text-primary"
-              activeProps={{ className: "text-primary font-medium" }}
-              activeOptions={{ exact: n.to === "/" }}
+              className={`text-sm text-foreground/80 transition-colors hover:text-primary ${path === n.to ? "text-primary font-medium" : ""}`}
             >
               {n.label}
             </Link>
@@ -59,11 +67,8 @@ export function Header() {
               <Link
                 key={n.to}
                 to={n.to}
-                resetScroll
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 text-base hover:bg-secondary"
-                activeProps={{ className: "text-primary font-medium" }}
-                activeOptions={{ exact: n.to === "/" }}
+                className={`rounded-md px-2 py-3 text-base hover:bg-secondary ${path === n.to ? "text-primary font-medium" : ""}`}
               >
                 {n.label}
               </Link>

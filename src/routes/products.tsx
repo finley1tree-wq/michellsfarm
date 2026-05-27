@@ -1,20 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import produce from "@/assets/produce.jpg";
 import berries from "@/assets/berries.jpg";
 import cattle from "@/assets/cattle.jpg";
 import pantry from "@/assets/pantry.jpg";
-
-export const Route = createFileRoute("/products")({
-  head: () => ({
-    meta: [
-      { title: "What We Grow — Michell's Farm" },
-      { name: "description", content: "Seasonal vegetables, fresh berries, pasture-raised beef, hay and straw, plus the best local goods from our neighbours on Vancouver Island." },
-      { property: "og:title", content: "What We Grow — Michell's Farm" },
-      { property: "og:description", content: "50+ vegetables, six kinds of berries, pasture-raised beef and the best of Vancouver Island." },
-    ],
-  }),
-  component: ProductsPage,
-});
 
 const vegetables = [
   "Apples — Fuji, Jonagold, Jonafree, Liberty, Prima, Summer Red, Gravenstein",
@@ -46,7 +33,7 @@ const partners = [
   ["Stillmeadow Farm Products", "https://www.stillmeadowfarm.ca/"],
 ] as const;
 
-function ProductsPage() {
+export function ProductsPage() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pb-12 pt-24 lg:px-10 lg:pt-32">
