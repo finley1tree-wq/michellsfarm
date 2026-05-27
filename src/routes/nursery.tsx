@@ -1,17 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
 import nurseryImg from "@/assets/nursery.jpg";
-
-export const Route = createFileRoute("/nursery")({
-  head: () => ({
-    meta: [
-      { title: "Michell Valley Plants — The Nursery at Michell's Farm" },
-      { name: "description", content: "Veggie starts, tomato plants, bedding plants, herbs, hanging baskets, roses and shrubs. Open every day 9:30—5 behind the market." },
-      { property: "og:title", content: "Michell Valley Plants" },
-      { property: "og:description", content: "Seeds, veggie starts, herbs, hanging baskets, roses and shrubs — open daily." },
-    ],
-  }),
-  component: NurseryPage,
-});
 
 const categories = [
   ["Seeds"],
@@ -25,7 +12,7 @@ const categories = [
   ["…and more"],
 ];
 
-function NurseryPage() {
+export function NurseryPage() {
   return (
     <>
       <section className="relative isolate overflow-hidden">

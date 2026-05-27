@@ -1,19 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/components/site/AppLink";
 import pumpkins from "@/assets/pumpkins.jpg";
 
-export const Route = createFileRoute("/visit")({
-  head: () => ({
-    meta: [
-      { title: "Visit — Michell's Farm Market" },
-      { name: "description", content: "Find us at 2451 Island View Rd, right on the Lochside Trail. Open seven days a week, 9-5. Plus the U-Pick pumpkin patch every fall." },
-      { property: "og:title", content: "Visit Michell's Farm" },
-      { property: "og:description", content: "On the Lochside Trail in Saanichton. Open 7 days a week, 9-5." },
-    ],
-  }),
-  component: VisitPage,
-});
-
-function VisitPage() {
+export function VisitPage() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pt-32">
